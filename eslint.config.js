@@ -33,7 +33,7 @@ export default [
       ...importPlugin.configs.recommended.rules,
     },
   },
-  ...compat.extends('standard-with-typescript'),
+  ...compat.extends('airbnb-base'),
   {
     rules: {
       'no-underscore-dangle': [
