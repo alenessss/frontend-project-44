@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
+console.log('Welcome to the Brain Games!');
+
+const name = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${name}!`);
+
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 // Выдает рандомное число
@@ -22,10 +27,11 @@ const RepeatQuestion = () => {
       console.log('Correct!');
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log(`Let's try again, ${name}!`);
       break;
     }
     if (step === 2) {
-      console.log('Congratulations');
+      console.log(`Congratulations, ${name}!`);
     }
   }
 };
