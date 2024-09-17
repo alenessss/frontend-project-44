@@ -4,39 +4,29 @@ import readlineSync from 'readline-sync';
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 // Выдает рандомное число
-const getRandomNumber = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-};
-// запишим рандомное число в переменную
-let numm;
-numm = getRandomNumber(1, 100);
-
-console.log(`Question: ${numm}`);
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
 
 // Првоерим число на четность
-const even_or_odd = (numm) => {
-  let word;
-  if (numm % 2 === 0) {
-    word = 'yes';
-    return word;
-  }
-  word = 'no';
-  return word;
-};
-let EvenOrOdd;
-EvenOrOdd = even_or_odd(numm);
+const isEven = (number) => (number % 2 === 0);
+// Находим правильный ответ
+const getCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
 
-// Дает ответ пользователь
-const GetQuestion = () => {
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === EvenOrOdd) {
-    console.log('Correct!');
-  } else {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${EvenOrOdd}.`);
-    // console.log("Let's try again, "+name+"!")
+const RepeatQuestion = () => {
+  for (let step = 0; step < 3; step += step) {
+    const num = getRandomNumber(1, 100);
+    const correctAnswer = getCorrectAnswer(num);
+
+    console.log(`Question: ${num}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      break;
+    }
+    if (step === 2) {
+      console.log('Congratulations,');
+    }
   }
 };
-
-GetQuestion();
+RepeatQuestion();
