@@ -12,7 +12,7 @@ const isEven = (number) => (number % 2 === 0);
 const getCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
 
 const RepeatQuestion = () => {
-  for (let step = 0; step < 3; step += step) {
+  for (let step = 0; step < 3; step += 1) {
     const num = getRandomNumber(1, 100);
     const correctAnswer = getCorrectAnswer(num);
 
@@ -25,7 +25,7 @@ const RepeatQuestion = () => {
       break;
     }
     if (step === 2) {
-      console.log('Congratulations,');
+      console.log('Congratulations');
     }
   }
 };
