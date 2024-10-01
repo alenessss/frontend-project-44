@@ -1,16 +1,32 @@
 import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-
-export default () => {
-  console.log(`Hello, ${name}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+export const GetName = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  return name;
 };
 
-// Выдает рандомное число
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
+export const GetWelcome = (FindTheAnswer, exercise) => {
+  const name = GetName();
+  console.log(`Hello, ${name}!`);
+  console.log(exercise);
 
-export { name };
+  for (let step = 0; step < 3; step += 1) {
+    const questionAnswer = FindTheAnswer();
 
-export { getRandomNumber };
+    const answer = String(questionAnswer[0]);
+    const question = questionAnswer[1];
+
+    console.log(`Question: ${question}`);
+
+    const UserAnswer = readlineSync.question('Your answer: ');
+
+    if (UserAnswer !== answer) {
+      console.log(`'${UserAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return;
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${name}!`);
+};
