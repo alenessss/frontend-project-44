@@ -1,6 +1,6 @@
 import { GetWelcome } from '../index.js';
 
-const createArithmeticProgression = (start, difference, length) => {
+const createArithmeticProgression = (start, difference, length = 10) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
     progression.push(start + i * difference);
@@ -13,9 +13,9 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + 
 const FindTheAnswer = () => {
   const start = getRandomNumber(1, 100);
   const difference = getRandomNumber(1, 10);
-  const length = getRandomNumber(5, 10);
-  const i = getRandomNumber(1, length);
-  const answer = createArithmeticProgression(start, difference, length);
+  const i = getRandomNumber(1, 10);
+  const length = getRandomNumber(1, 10);
+  const answer = createArithmeticProgression(start, difference);
   const UserAnswer = answer[i];
   answer[i] = '..';
   const question = answer.join(' ');
