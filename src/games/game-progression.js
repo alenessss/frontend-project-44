@@ -14,7 +14,6 @@ const FindTheAnswer = () => {
   const start = getRandomNumber(1, 100);
   const difference = getRandomNumber(1, 10);
   const i = getRandomNumber(1, 10);
-  const length = getRandomNumber(1, 10);
   const answer = createArithmeticProgression(start, difference);
   const UserAnswer = answer[i];
   answer[i] = '..';
