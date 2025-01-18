@@ -33,7 +33,6 @@ npm link
 ### Игра brain-even:
 
 Вам нужно угадать четное или нечетное число. Если число четное, то нужно написать «да». В противном случае нужно написать «нет». Ниже представлена установка данных игр и запуск brain-even
-
 [![asciicast](https://asciinema.org/a/KrVV0eR0SbufNLhINBJTwSX0c.svg)](https://asciinema.org/a/KrVV0eR0SbufNLhINBJTwSX0c)
 
 ### Игра brain-calc:
