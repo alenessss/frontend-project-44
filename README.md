@@ -1,6 +1,8 @@
-### Hexlet tests and linter status:
+### Тесты Hexlet и статус линтера:
 [![Actions Status](https://github.com/alenessss/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/alenessss/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/alenessss/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/bb0d0e81849059f07d7b/maintainability" /></a>
+
+### О проекте
 
 Данная программа называется «Игры разума» — это набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
@@ -18,6 +20,13 @@
 
 1. Склонируйте созданный репозиторий проекта локально. В результате клонирования репозитория в вашей файловой системе появится корневая директория проекта — в ней будем размещать все файлы проекта. По умолчанию, имя этой директории будет таким же, как имя репозитория.
 2. Инициализируйте наш npm-пакет внутри корневой директории проекта, используя команду make install
+
+```js
+git clone https://github.com/KindProgrammer/frontend-project-44.git
+cd frontend-project-44/
+make install
+npm link
+```
 
 [![asciicast](https://asciinema.org/a/KrVV0eR0SbufNLhINBJTwSX0c.svg)](https://asciinema.org/a/KrVV0eR0SbufNLhINBJTwSX0c)
 
