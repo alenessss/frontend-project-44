@@ -13,7 +13,7 @@ const findTheAnswer = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
   const question = `${number1} ${number2}`;
-  const userAnswer = findNod(number1, number2);
+  const userAnswer = String(findNod(number1, number2));
 
   return [userAnswer, question];
 };
