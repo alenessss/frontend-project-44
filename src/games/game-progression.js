@@ -1,5 +1,5 @@
 import { getAnswer } from '../index.js';
-import {getRandomNumber} from '../utils.js'
+import { getRandomNumber } from '../utils.js';
 
 const createArithmeticProgression = (start, difference, length = 10) => {
   const progression = [];

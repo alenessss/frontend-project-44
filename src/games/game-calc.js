@@ -1,5 +1,5 @@
 import { getAnswer } from '../index.js';
-import {getRandomNumber, getRandomSign} from '../utils.js'
+import { getRandomNumber, getRandomSign } from '../utils.js';
 
 const findTheAnswer = () => {
   const numberOne = getRandomNumber(1, 100);

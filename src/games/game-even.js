@@ -1,5 +1,5 @@
 import { getAnswer } from '../index.js';
-import {getRandomNumber} from '../utils.js'
+import { getRandomNumber } from '../utils.js';
 
 // Првоерим число на четность
 const isEven = (number) => (number % 2 === 0);

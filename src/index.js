@@ -10,7 +10,7 @@ export const getAnswer = (findTheAnswer, exercise) => {
   const name = getName();
   console.log(`Hello, ${name}!`);
   console.log(exercise);
-  const stepNumberWin = 3 
+  const stepNumberWin = 3;
   for (let step = 0; step < stepNumberWin; step += 1) {
 
     const [answer, question] = findTheAnswer();
