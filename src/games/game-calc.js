@@ -1,34 +1,34 @@
-import { GetWelcome } from '../index.js';
+import { getAnswer } from '../index.js';
 
 // Выдает рандомное число
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
 
 // Выдает случайный знак
-const GetRandomSign = () => {
+const getRandomSign = () => {
   const sign = ['+', '-', '*'];
   const i = sign[Math.floor(Math.random() * sign.length)];
   return i;
 };
 
-const FindTheAnswer = () => {
-  const NumberOne = getRandomNumber(1, 100);
-  const NumberTwo = getRandomNumber(1, 100);
-  const Symbol = GetRandomSign(3);
-  const question = `${NumberOne} ${Symbol} ${NumberTwo}`;
+const findTheAnswer = () => {
+  const numberOne = getRandomNumber(1, 100);
+  const numberTwo = getRandomNumber(1, 100);
+  const symbol = getRandomSign(3);
+  const question = `${numberOne} ${symbol} ${numberTwo}`;
 
-  let UserAnswer = 0;
-  if (Symbol === '*') {
-    UserAnswer = NumberOne * NumberTwo;
-  } else if (Symbol === '+') {
-    UserAnswer = NumberOne + NumberTwo;
-  } else if (Symbol === '-') {
-    UserAnswer = NumberOne - NumberTwo;
+  let userAnswer = 0;
+  if (symbol === '*') {
+    userAnswer = numberOne * numberTwo;
+  } else if (symbol === '+') {
+    userAnswer = numberOne + numberTwo;
+  } else if (symbol === '-') {
+    userAnswer = numberOne - numberTwo;
   }
-  return [UserAnswer, question];
+  return [userAnswer, question];
 };
 
 const exercise = 'What is the result of the expression?';
 
 export default () => {
-  GetWelcome(FindTheAnswer, exercise);
+  getAnswer(findTheAnswer, exercise);
 };

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import GetWelcome from '../src/games/game-prime.js';
+import getPrimeNumber from '../src/games/game-prime.js';
 
-GetWelcome();
+getPrimeNumber();

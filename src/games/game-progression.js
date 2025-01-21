@@ -1,4 +1,4 @@
-import { GetWelcome } from '../index.js';
+import { getAnswer } from '../index.js';
 
 const createArithmeticProgression = (start, difference, length = 10) => {
   const progression = [];
@@ -10,19 +10,19 @@ const createArithmeticProgression = (start, difference, length = 10) => {
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
 
-const FindTheAnswer = () => {
+const findTheAnswer = () => {
   const start = getRandomNumber(1, 100);
   const difference = getRandomNumber(1, 10);
   const i = getRandomNumber(1, 10);
   const answer = createArithmeticProgression(start, difference);
-  const UserAnswer = answer[i];
+  const userAnswer = answer[i];
   answer[i] = '..';
   const question = answer.join(' ');
-  return [UserAnswer, question];
+  return [userAnswer, question];
 };
 
 const exercise = 'What number is missing in the progression?';
 
 export default () => {
-  GetWelcome(FindTheAnswer, exercise);
+  getAnswer(findTheAnswer, exercise);
 };

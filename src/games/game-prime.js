@@ -1,4 +1,4 @@
-import { GetWelcome } from '../index.js';
+import { getAnswer } from '../index.js';
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
 
@@ -14,15 +14,15 @@ const isPrime = (num) => {
 
 const getCorrectAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
-const FindTheAnswer = () => {
+const findTheAnswer = () => {
   const question = getRandomNumber(1, 100);
-  const UserAnswer = getCorrectAnswer(question);
+  const userAnswer = getCorrectAnswer(question);
 
-  return [UserAnswer, question];
+  return [userAnswer, question];
 };
 
 const exercise = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default () => {
-  GetWelcome(FindTheAnswer, exercise);
+  getAnswer(findTheAnswer, exercise);
 };
