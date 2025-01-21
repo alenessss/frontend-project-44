@@ -1,15 +1,18 @@
 import { getAnswer } from '../index.js';
 import { getRandomNumber, getRandomSign } from '../utils.js';
 
-const calculate = (numberOne, numberTwo, symbol) =>{
+const calculate = (numberOne, numberTwo, symbol) => {
   if (symbol === '*') {
     return numberOne * numberTwo;
-  } else if (symbol === '+') {
+  }
+  if (symbol === '+') {
     return numberOne + numberTwo;
-  } else if (symbol === '-') {
+  }
+  if (symbol === '-') {
     return numberOne - numberTwo;
   }
-}
+  return null;
+};
 
 const findTheAnswer = () => {
   const numberOne = getRandomNumber(1, 100);

@@ -12,10 +12,8 @@ export const getAnswer = (findTheAnswer, exercise) => {
   console.log(exercise);
   const stepNumberWin = 3;
   for (let step = 0; step < stepNumberWin; step += 1) {
-
     const [answer, question] = findTheAnswer();
     console.log(`Question: ${question}`);
-
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== answer) {
