@@ -1,7 +1,5 @@
 import { getAnswer } from '../index.js';
-
-// Выдает рандомное число
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
+import {getRandomNumber} from '../utils.js'
 
 const findNod = (number1, number2) => {
   if (number2 !== 0) {

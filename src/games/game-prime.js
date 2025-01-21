@@ -1,6 +1,5 @@
 import { getAnswer } from '../index.js';
-
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
+import {getRandomNumber} from '../utils.js'
 
 const isPrime = (num) => {
   if (num < 2) return false;

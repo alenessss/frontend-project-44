@@ -1,4 +1,5 @@
 import { getAnswer } from '../index.js';
+import {getRandomNumber} from '../utils.js'
 
 const createArithmeticProgression = (start, difference, length = 10) => {
   const progression = [];
@@ -7,8 +8,6 @@ const createArithmeticProgression = (start, difference, length = 10) => {
   }
   return progression;
 };
-
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
 
 const findTheAnswer = () => {
   const start = getRandomNumber(1, 100);

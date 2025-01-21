@@ -1,7 +1,6 @@
 import { getAnswer } from '../index.js';
+import {getRandomNumber} from '../utils.js'
 
-// Выдает рандомное число
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
 // Првоерим число на четность
 const isEven = (number) => (number % 2 === 0);
 // Находим правильный ответ

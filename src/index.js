@@ -10,18 +10,15 @@ export const getAnswer = (findTheAnswer, exercise) => {
   const name = getName();
   console.log(`Hello, ${name}!`);
   console.log(exercise);
+  const stepNumberWin = 3 
+  for (let step = 0; step < stepNumberWin; step += 1) {
 
-  for (let step = 0; step < 3; step += 1) {
-    const questionAnswer = findTheAnswer();
-
-    const answer = String(questionAnswer[0]);
-    const question = questionAnswer[1];
-
+    const [answer, question] = findTheAnswer();
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer !== answer) {
+    if (userAnswer !== String(answer)) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;

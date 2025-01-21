@@ -1,14 +1,5 @@
 import { getAnswer } from '../index.js';
-
-// Выдает рандомное число
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min + 1;
-
-// Выдает случайный знак
-const getRandomSign = () => {
-  const sign = ['+', '-', '*'];
-  const i = sign[Math.floor(Math.random() * sign.length)];
-  return i;
-};
+import {getRandomNumber, getRandomSign} from '../utils.js'
 
 const findTheAnswer = () => {
   const numberOne = getRandomNumber(1, 100);
