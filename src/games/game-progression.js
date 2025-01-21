@@ -1,9 +1,9 @@
 import { getAnswer } from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-const createArithmeticProgression = (start, difference, length = 10) => {
+const createArithmeticProgression = (start, difference) => {
   const progression = [];
-  for (let i = 0; i < length; i += 1) {
+  for (let i = 0; i < 10; i += 1) {
     progression.push(start + i * difference);
   }
   return progression;
