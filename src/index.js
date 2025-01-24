@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+const stepNumberWin = 3;
 
 export const getName = () => {
   console.log('Welcome to the Brain Games!');
@@ -6,11 +7,10 @@ export const getName = () => {
   return name;
 };
 
-export const getAnswer = (findTheAnswer, exercise) => {
+export const runGame = (findTheAnswer, exercise) => {
   const name = getName();
   console.log(`Hello, ${name}!`);
   console.log(exercise);
-  const stepNumberWin = 3;
   for (let step = 0; step < stepNumberWin; step += 1) {
     const [answer, question] = findTheAnswer();
     console.log(`Question: ${question}`);

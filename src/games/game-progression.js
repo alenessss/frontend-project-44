@@ -1,9 +1,10 @@
-import { getAnswer } from '../index.js';
+import { runGame } from '../index.js';
 import { getRandomNumber } from '../utils.js';
+const lengthProgression = 10;
 
 const createArithmeticProgression = (start, difference) => {
   const progression = [];
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < lengthProgression; i += 1) {
     progression.push(start + i * difference);
   }
   return progression;
@@ -23,5 +24,5 @@ const findTheAnswer = () => {
 const exercise = 'What number is missing in the progression?';
 
 export default () => {
-  getAnswer(findTheAnswer, exercise);
+  runGame(findTheAnswer, exercise);
 };

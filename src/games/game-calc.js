@@ -1,5 +1,11 @@
-import { getAnswer } from '../index.js';
-import { getRandomNumber, getRandomSign } from '../utils.js';
+import { runGame } from '../index.js';
+import { getRandomNumber } from '../utils.js';
+
+export const getRandomSign = () => {
+  const sign = ['+', '-', '*'];
+  const i = sign[Math.floor(Math.random() * sign.length)];
+  return i;
+};
 
 const calculate = (numberOne, numberTwo, symbol) => {
   if (symbol === '*') {
@@ -26,5 +32,5 @@ const findTheAnswer = () => {
 const exercise = 'What is the result of the expression?';
 
 export default () => {
-  getAnswer(findTheAnswer, exercise);
+  runGame(findTheAnswer, exercise);
 };
