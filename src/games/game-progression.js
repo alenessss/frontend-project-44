@@ -11,7 +11,7 @@ const createArithmeticProgression = (start, difference) => {
   return progression;
 };
 
-const findTheAnswer = () => {
+const formingResponse = () => {
   const start = getRandomNumber(1, 100);
   const difference = getRandomNumber(1, 10);
   const i = getRandomNumber(1, 10);
@@ -25,5 +25,5 @@ const findTheAnswer = () => {
 const exercise = 'What number is missing in the progression?';
 
 export default () => {
-  runGame(findTheAnswer, exercise);
+  runGame(formingResponse, exercise);
 };
