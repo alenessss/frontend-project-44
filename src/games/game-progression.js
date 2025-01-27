@@ -1,5 +1,6 @@
 import { runGame } from '../index.js';
 import { getRandomNumber } from '../utils.js';
+
 const lengthProgression = 10;
 
 const createArithmeticProgression = (start, difference) => {

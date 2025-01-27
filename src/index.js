@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+
 const stepNumberWin = 3;
 
 export const getName = () => {
