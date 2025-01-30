@@ -14,7 +14,7 @@ const createArithmeticProgression = (start, difference) => {
 const formingResponse = () => {
   const start = getRandomNumber(1, 100);
   const difference = getRandomNumber(1, 10);
-  const i = getRandomNumber(1, 10);
+  const i = getRandomNumber(0, lengthProgression);
   const answer = createArithmeticProgression(start, difference);
   const userAnswer = String(answer[i]);
   answer[i] = '..';
